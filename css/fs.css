@@ -1,0 +1,308 @@
+.bgstretcher {
+background: black;
+overflow: hidden;
+width: 100%;
+position: fixed !important;
+z-index: -1;
+}
+.bgstretcher,.bgstretcher UL,.bgstretcher UL LI {
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+}
+.bgstretcher UL,.bgstretcher UL LI {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+#page {
+z-index: 1;
+width: 950px;
+margin: 0 auto;
+}
+header .logo_container {
+margin: 0 auto;
+padding: 2px 0 25px 0;
+width: 950px;
+}
+.sidebar {
+float: left;
+font-family: helvetica,arial;
+height: 32px;
+position: relative;
+width: 183px;
+z-index: 100;
+}
+.sidebar ul {
+list-style: none outside none;
+margin: 0;
+padding: 0;
+}
+.sidebar ul ul#menu-main {
+list-style-type: none;
+margin: 0;
+padding: 0;
+font-family: helvetica,arial;
+}
+/* make the LI display inline */ 
+/* it's position relative so that position absolute */ 
+/* can be used in submenu */ 
+.sidebar ul ul#menu-main li {
+float: left;
+height: 32px !important;
+line-height: normal;
+position: relative;
+width: 183px;
+}
+/* this is the parent menu */ 
+.sidebar ul ul#menu-main li a {
+background: url("../images/menu_first_bg.png") repeat scroll 0 0 transparent;
+color: #FFFFFF;
+display: block;
+font-size: 16px;
+font-weight: bold;
+letter-spacing: 1.4px;
+padding: 9px 0 6px 8px;
+text-decoration: none;
+text-transform: uppercase;
+width: 175px;
+}
+.sidebar ul ul#menu-main li a:hover {
+color: #fff;
+background: url("../images/menu_first_bg_hover.png") repeat;
+cursor: pointer;
+}
+.sidebar ul ul#menu-main li a:hover {
+color: #fff;
+}
+/* you can make a different style for default selected value */ 
+.sidebar ul ul#menu-main a.current-menu-item {
+color: #f00;
+}
+/* submenu,it's hidden by default */ 
+.sidebar ul ul#menu-main ul {
+cursor: pointer;
+height: 0;
+left: 183px;
+position: absolute;
+top: 0;
+display: none;
+width: 175px;
+box-shadow:1px 1px 4px #1e1e1e;
+-moz-box-shadow: 1px 1px 4px #1e1e1e;
+-webkit-box-shadow: 1px 1px 4px #1e1e1e;
+}
+.sidebar ul ul#menu-main ul ul {
+cursor: pointer;
+height: 0;
+left: 108px;
+position: absolute;
+top: 0;
+display: none;
+width: 175px;
+}
+.sidebar ul ul#menu-main ul li {
+float: left;
+height: 32px !important;
+line-height: normal;
+position: relative;
+width: 175px;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li,.sidebar ul ul#menu-main li#menu-item-44 ul li a {
+width: 100px;
+} {
+width: 100px;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li a {
+width: 100px;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a,.sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li {
+width: 230px;
+}
+.sidebar ul ul#menu-main li#menu-item-44:hover ul li ul {
+display: none!important;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover a {
+cursor: text;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a {
+cursor: pointer;
+}
+.sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul {
+display: block!important;
+}
+/* display block will make the link fill the whole area of LI */ 
+.sidebar ul ul#menu-main ul a {
+background: url("../images/menu_second_bg.png") repeat scroll 0 0 transparent;
+color: #FFFFFF;
+font-size: 12.5px;
+letter-spacing: 0.3px;
+padding: 10px 0 9px 8px;
+width: 230px;
+display: block;
+}
+.sidebar ul ul#menu-main ul li ul a {
+background: url("../images/menu_first_bg.png") repeat scroll 0 0 transparent;
+color: #FFFFFF;
+font-size: 12.5px;
+letter-spacing: 0.3px;
+padding: 10px 0 9px 8px;
+width: 230px;
+display: block;
+}
+.sidebar ul ul#menu-main ul a:hover {
+text-decoration: none;
+}
+/* fix ie6 small issue */ 
+/* we should always avoid using hack like this */ 
+/* should put it into separate file :) */ 
+*html .sidebar ul ul#menu-main ul {
+margin: 0 0 0 -2px;
+}
+#content {
+background-color:rgba(255,255,255,0.9);
+color: #1E1E1E;
+float: left;
+margin:0 0 0 42px;
+font-family: helvetica,arial;
+width: 725px;
+z-index: 0;
+
+}
+h1 {
+border-bottom: 1px solid #CCCCCC;
+color: #343434;
+font-family: helvetica;
+font-size: 3em;
+font-weight: bold;
+letter-spacing: 1px;
+line-height: 1;
+margin-bottom: 0.4em;
+padding: 0 0 3px;
+text-transform: uppercase;
+}
+h1 a {
+text-decoration: none;
+color: #343434;
+}
+h1 a:hover {
+color: #000;
+}
+h2 {
+color: #DF0000;
+font-family: helvetica,arial;
+font-size: 1.7em;
+font-weight: bold;
+letter-spacing: 0.7px;
+margin-bottom: 0.45em;
+}
+h2 a {
+color: #df0000;
+text-decoration: underline;
+}
+h2 a:hover {
+color: #343434;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1;
+margin-bottom: 1em;
+color: #1e1e1e;
+}
+h4 {
+font-size: 1.2em;
+line-height: 1.25;
+margin-bottom: 1.25em;
+color: #df0000;
+}
+h5 {
+font-size: 1em;
+font-weight: bold;
+margin-bottom: 1.5em;
+color: #1e1e1e;
+}
+h6 {
+font-size: 1em;
+font-weight: bold;
+color: #df0000;
+}
+p {
+color: #1E1E1E;
+font-size: 13px;
+line-height: 21px;
+margin: 9px 0 15px;
+}
+p a {
+color: #df0000;
+}
+p a:visited {
+color: #df0000;
+}
+p a:hover {
+color: #343434;
+}
+.content-item {
+padding:20px;
+font-family: tahoma;
+box-shadow:1px 1px 4px #1e1e1e;
+-moz-box-shadow: 1px 1px 4px #1e1e1e;
+-webkit-box-shadow: 1px 1px 4px #1e1e1e;float:left;width:685px;opacity:1;
+}
+
+.postcard{padding:0;box-shadow:1px 1px 4px #1e1e1e;
+-moz-box-shadow: 1px 1px 4px #1e1e1e;
+-webkit-box-shadow: 1px 1px 4px #1e1e1e;float:left;width:725px;}
+.postcard p{margin:0;padding:0;line-height:0px;}
+.postcard p a{text-decoration:none;}
+footer {
+float: right;
+width: 725px;
+}
+.fcontainer p {
+text-align: right;
+color: #fff;
+font-size: 11px;
+}
+.fcontainer p a {
+color: #fff;
+text-decoration: underline;
+}
+.fcontainer p a:hover {
+color: #f9f9f9;
+}
+#toggle{cursor:pointer;line-height:0;}
+#pc1{}
+#pc2{display:none;}
+article{display:inline;}
+#random{width:100px;height:100px;}
+ul#menu-the-collective{float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;}
+.menu-the-collective-container li {font-size: 10px;
+    line-height: 18px;list-style:none;float:left;width:25%;margin:0 0 20px;}
+.menu-the-collective-container li span.name a{color:#343434;text-decoration:none;font-size:15px;}
+.menu-the-collective-container li span.name a:hover{text-decoration:none;}
+
+
+.menu-the-collective-container li a{font-size:11px;color:#fe0000;cursor:pointer;}
+.menu-the-collective-container li a:visted{color:#fe0000;}
+
+.menu-the-collective-container li a:hover{color:#1e1e1e;}
+
+
+.headshot{float:left;margin:5px 15px 71px 0;border:1px solid #343434;}
+#corestaff ul{margin:0;padding:0;}
+#corestaff li{font-size:17px;line-height:17px;margin:0 0 20px;list-style:none;}
+.contact_info{font-size:11px;color:#343434;}
+
+.contact_info a{color:#fe0000;cursor:pointer;text-decoration:underline;}
+.contact_info a:visted{color:#fe0000;}
+
+.contact_info a:hover{color:#1e1e1e;}
+#widgit-sidebar{box-shadow:1px 1px 4px #1e1e1e;
+-moz-box-shadow: 1px 1px 4px #1e1e1e;
+-webkit-box-shadow: 1px 1px 4px #1e1e1e;float:left;}
+hr{background:#cccccc;}
