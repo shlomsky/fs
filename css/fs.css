@@ -68,6 +68,7 @@ padding: 9px 0 6px 8px;
 text-decoration: none;
 text-transform: uppercase;
 width: 175px;
+height:17px;
 }
 .sidebar ul ul#menu-main li a:hover {
 color: #fff;
@@ -142,6 +143,7 @@ letter-spacing: 0.3px;
 padding: 10px 0 9px 8px;
 width: 230px;
 display: block;
+height:13px;
 }
 .sidebar ul ul#menu-main ul li ul a {
 background: url("../images/menu_first_bg.png") repeat scroll 0 0 transparent;
@@ -151,6 +153,8 @@ letter-spacing: 0.3px;
 padding: 10px 0 9px 8px;
 width: 230px;
 display: block;
+height:13px;
+}
 }
 .sidebar ul ul#menu-main ul a:hover {
 text-decoration: none;
