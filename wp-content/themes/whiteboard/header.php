@@ -32,12 +32,12 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">	
+	<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">	
 	<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-	<link rel="stylesheet" type="text/css" href="css/fs.css" />
-	<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
-	<script type="text/javascript" src="js/bgstretcher.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/fs.css" />
+	<script type="text/javascript" src="/js/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="/js/bgstretcher.js"></script>
 	
 	<?php wp_head(); ?> <!-- this is used by many Wordpress features and for plugins to work proporly -->
 	<script type="text/javascript">
@@ -57,8 +57,8 @@
 
 <body <?php body_class(); ?>>
 
-<script type="text/javascript" src="js/loader.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="/js/loader.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
 <div id="page"><!-- this encompasses the entire Web site -->
 	<header>
 		

@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <?php if (is_page(105)) { ?>
-	<script type="text/javascript" src="js/random.js"></script>
+	<script type="text/javascript" src="/js/random.js"></script>
 
 	<div id="random">
 		<a href="<?php bloginfo('url'); ?>/?page_id=6" />
-			<img src="./images/glow_button_new.gif" />
+			<img src="/images/glow_button_new.gif" />
 		</a>
 		
 	</div>
@@ -16,7 +16,7 @@
 <?php get_sidebar(); ?>
 <div id="content">
 		<?php if (is_page(array(6,64,68,66))) { ?>
-			<script type="text/javascript" src="js/divswitch.js"></script>
+			<script type="text/javascript" src="/js/divswitch.js"></script>
 			<div class="postcard">
 		<?php } else { ?>		
 	<div class="content-item">
