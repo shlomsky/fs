@@ -3,7 +3,7 @@
 	<footer>
 		<div class="fcontainer">
 			<p>
-				<a href="http://www.fringenyc.org/basic_page.php?ltr=H#HAMLET" target="_blank"><img src="images/purchase.png" border="0" /></a> <br /> 
+				<!-- <a href="http://www.fringenyc.org/basic_page.php?ltr=H#HAMLET" target="_blank"><img src="images/purchase.png" border="0" /></a> <br /> -->
 				
 			
 				&copy; <?php echo date("Y") ?> <?php bloginfo('name'); ?><br />Site by <a href="http://brianandrich.com/?ref=fs" alt="Brian Andrich" />Brian Andrich</a>
