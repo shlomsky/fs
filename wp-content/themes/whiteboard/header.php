@@ -63,7 +63,7 @@
 	<header>
 		
 		
-				<div class="logo_container"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><img src="./images/full_stop_logo.png" /></a></div>
+				<div class="logo_container"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><img src="/images/full_stop_logo.png" /></a></div>
 		
 		
 		
