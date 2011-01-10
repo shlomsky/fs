@@ -4,7 +4,7 @@
 	<script type="text/javascript" src="/js/random.js"></script>
 
 	<div id="random">
-		<a href="<?php bloginfo('url'); ?>/?page_id=6" />
+		<a href="<?php bloginfo('url'); ?>/2011-season/foreplays/" />
 			<img src="/images/glow_button_new.gif" />
 		</a>
 		
