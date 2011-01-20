@@ -14,6 +14,10 @@
 <?php } else { ?>
 
 <?php get_sidebar(); ?>
+<!--[if IE]>
+#content{background:#ffffff !important;}
+<![endif]-->
+
 <div id="content">
 		<?php if (is_page(array(6,64,68,66))) { ?>
 			<script type="text/javascript" src="/js/divswitch.js"></script>
