@@ -14,8 +14,8 @@
 <?php } else { ?>
 
 <?php get_sidebar(); ?>
-<!--[if IE]>
-#content{background:#ffffff !important;}
+<!--[if lt IE 9]>
+#content{background:#ffffff!important;}
 <![endif]-->
 
 <div id="content">
