@@ -15,7 +15,7 @@
 
 <?php get_sidebar(); ?>
 <!--[if lt IE 9]>
-#content{background:#ffffff!important;}
+#content{background-color:#ffffff !important;}
 <![endif]-->
 
 <div id="content">
