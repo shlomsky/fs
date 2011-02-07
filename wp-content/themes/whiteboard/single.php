@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-<div id="content">
+<!--[if IE]>       <style>#content{background-color:#fff;}</style>          <![endif]-->
+<div id="content"> 
 	<div class="content-item">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
@@ -8,7 +9,7 @@
 				<h1><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			
 				<div id="post-content">
-					<p><?php the_time() ?> by <?php the_author_posts_link() ?></p>
+					<p style="color: #666; font-size: 12px; font-style: italic;">Posted at <?php the_time() ?> by <?php the_author_posts_link() ?></p>
 					<?php the_content(); ?>
 					<div class="pagination">
 						<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
@@ -17,22 +18,16 @@
 			<article>
 				
 			<div id="post-meta">
-				<p>
-					Posted on <?php the_time('F j, Y'); ?> at <?php the_time() ?>
-				</p>
+			
 				<p>
 					<?php comments_popup_link('No comments', 'One comment', '% comments', 'comments-link', 'Comments are closed'); ?> 
 				</p>
-				<p>
-					Categories: <?php the_category(', ') ?>
-					<br />
-					<?php the_tags('Tags: ', ', ', ' '); ?>
-				</p>
+			
 			
 			</div><!--#post-meta-->
 			
 			
-			</div><!--#post-author-->
+			
 
 		</div><!-- #post-## -->
 
