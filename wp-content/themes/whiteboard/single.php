@@ -8,6 +8,7 @@
 				<h1><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			
 				<div id="post-content">
+					<p><?php the_time() ?> by <?php the_author_posts_link() ?></p>
 					<?php the_content(); ?>
 					<div class="pagination">
 						<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
@@ -30,15 +31,7 @@
 			
 			</div><!--#post-meta-->
 			
-			<!-- If a user fills out their bio info, it's included here -->
-			<div id="post-author">
-				<h3>Written by <?php the_author_posts_link() ?></h3>
-				<!-- This avatar is the user's gravatar (http://gravatar.com) based on their administrative email address -->
-				<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_email(), '80' ); } ?></p>
-				<div id="authorDescription">
-					<?php the_author_meta('description') ?> 
-					
-				</div><!--#author-description -->
+			
 			</div><!--#post-author-->
 
 		</div><!-- #post-## -->
