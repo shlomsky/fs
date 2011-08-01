@@ -4,7 +4,7 @@
 	<script type="text/javascript" src="/js/random.js"></script>
 
 	<div id="random">
-		<a href="<?php bloginfo('url'); ?>/2011-season/unville-brazil/" />
+		<a href="<?php bloginfo('url'); ?>/2011-season/play-development-series/" />
 			<img src="/images/glow_button_new.gif" />
 		</a>
 		
