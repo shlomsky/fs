@@ -11,7 +11,8 @@
 		<?php } ?>
 		<div class="fcontainer">
 			<p>
-				 <a href="http://www.smarttix.com/show.aspx?showcode=unv92D&ss=1" target="_blank"><img src="/images/purchase.png?v1" border="0" /></a> </p>
+				 
+				 <!-- <a href="http://www.smarttix.com/show.aspx?showcode=unv92D&ss=1" target="_blank"><img src="images/purchase.png" border="0" /></a> <br />  -->
 				<?php if (is_page(64)) { ?>
 	
 	<ul style="color:#fff;clear:both;float:right;padding:4px;margin:0 0 20px;font-weight:bold;background:green;">Support Green Initiatives:
