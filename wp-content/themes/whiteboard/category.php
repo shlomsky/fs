@@ -27,6 +27,8 @@
 				<?php if (the_tags('Tags: ', ', ', ' ')); ?>
 			</p>
 		</div><!--.postMeta-->
+
+<!-- ADD BREAK BTWN POSTS, padding-bottom: 10-15px -->
 		
 	<?php endwhile; else: ?>
 		<div class="no-results">
