@@ -32,12 +32,13 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">	
+	<link rel="stylesheet" href="<?php bloginfo('url'); ?>/css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="<?php bloginfo('url'); ?>/css/blueprint/print.css" type="text/css" media="print">	
 	<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-	<link rel="stylesheet" type="text/css" href="/css/fs.css" />
-	<script type="text/javascript" src="/js/jquery-1.4.4.js"></script>
-	<script type="text/javascript" src="/js/bgstretcher.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('url'); ?>/css/fs.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('url'); ?>/js/bgstretcher.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('url'); ?>/js/fs.js"></script>
 	
 	<?php wp_head(); ?> <!-- this is used by many Wordpress features and for plugins to work proporly -->
 	<script type="text/javascript">
@@ -53,17 +54,21 @@
 	  })();
 
 	</script>
+	<meta property="og:title" content="FullStop Collective" />
+  <meta property="og:type" content="actor" />
+  <meta property="og:url" content="http://fullstopcollective.org" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="FullStop Collective" />
+  <meta property="fb:admins" content="3418506" />
 </head>
 
 <body <?php body_class(); ?>>
 
-<script type="text/javascript" src="/js/loader.js"></script>
-<script type="text/javascript" src="/js/menu.js"></script>
 <div id="page"><!-- this encompasses the entire Web site -->
 	<header>
 		
 		
-				<div class="logo_container"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><img src="/images/full_stop_logo.png" /></a></div>
+				<div class="logo_container"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><img src="<?php bloginfo('url'); ?>/images/full_stop_logo.png" /></a></div>
 		
 		
 		

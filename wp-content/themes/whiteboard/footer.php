@@ -23,8 +23,7 @@
 
 		<?php } else { ?> <?php } ?>
 			
-				<p>&copy; <?php echo date("Y") ?> <?php bloginfo('name'); ?><br />Site by <a href="http://brianandrich.com/?ref=fs" alt="Brian Andrich" />Brian Andrich</a>
-			</p>
+				<p>&copy; <?php echo date("Y") ?> <?php bloginfo('name'); ?></p>
 		
 		</div><!--.container-->
 	</footer>

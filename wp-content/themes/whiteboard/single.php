@@ -1,15 +1,20 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 <!--[if IE]>       <style>#content{background-color:#fff;}</style>          <![endif]-->
-<div id="content"> 
-	<div class="content-item">
+<div id="content-blog" class="single"> 
+
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 			<article>
-				<h1><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			
 				<div id="post-content">
-					<p style="color: #666; font-size: 12px; font-style: italic;">Posted at <?php the_time() ?> by <?php the_author_posts_link() ?></p>
+					<p class="byline">
+      			<?php the_time('M j, Y') ?>&nbsp;&nbsp;<span class="sep">|</span>&nbsp;&nbsp;<span class="name"><?php the_author() ?></span>
+      		</p>
+      		<div class="share">
+      		  <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      		</div>
 					<?php the_content(); ?>
 					<div class="pagination">
 						<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
@@ -47,7 +52,7 @@
 		<?php comments_template( '', true ); ?>
 
 	<?php endwhile; ?><!--end loop-->
-	</div>
+
 </div><!--#content-->
 
 <?php get_footer(); ?>

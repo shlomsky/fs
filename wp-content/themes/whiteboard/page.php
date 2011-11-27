@@ -1,11 +1,10 @@
 <?php get_header(); ?>
 
 <?php if (is_page(105)) { ?>
-	<script type="text/javascript" src="/js/random.js"></script>
 
 	<div id="random">
-		<a href="<?php bloginfo('url'); ?>/2011-season/play-development-series/" />
-			<img src="/images/glow_button_new.gif" />
+		<a href="<?php bloginfo('url'); ?>/2012" />
+			<img src="<?php bloginfo('url'); ?>/images/glow_button_new.gif" />
 		</a>
 		
 	</div>
@@ -20,9 +19,12 @@
 </style>
 <![endif]-->
 
-<div id="content">
+<?php if (is_page(811)) { ?>
+<div id="content" class="season">
+  <?php } else { ?>
+    <div id="content">
+<?php } ?>
 		<?php if (is_page(array(6,64,68,66))) { ?>
-			<script type="text/javascript" src="/js/divswitch.js"></script>
 			<div class="postcard">
 		<?php } else { ?>		
 	<div class="content-item">
@@ -34,7 +36,7 @@
 				<?php if (is_page(array(6,64,68,66))) { ?>
 					
 				<?php } else { ?>
-				<h1><?php the_title(); ?></h1>
+				<h1 class="title"><?php the_title(); ?></h1>
 				
 				<?php } ?>
 	
