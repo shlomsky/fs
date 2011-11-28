@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="content">
+<div id="content-blog">
 
 	<h1>
 		<?php if ( is_day() ) : ?> <!-- if the daily archive is loaded -->
@@ -14,24 +14,29 @@
 	</h1>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+    <div class="post">
 		<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; ?> <!-- loades the post's featured thumbnail, requires Wordpress 3.0+ -->
-		<p>
-			Written on <?php the_time('F j, Y'); ?> at <?php the_time() ?>, by <?php the_author_posts_link() ?>
+
+		<p class="byline">
+			<?php the_time('M j, Y') ?>&nbsp;&nbsp;<span class="sep">|</span>&nbsp;&nbsp;<span class="name"><?php the_author() ?></span>
 		</p>
 		<div class="post-excerpt">
-			<?php the_excerpt(); ?> <!-- the excerpt is loaded to help avoid duplicate content issues -->
+			<?php the_content(); ?> <!-- the excerpt is loaded to help avoid duplicate content issues -->
 		</div>
-		
+    <div class="more">
+      <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"> → Read More</a>
+    </div>
 		<div class="post-meta">
 			<p>
 				<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-				<br />
-				Categories: <?php the_category(', ') ?>
-				<br />
-				<?php if (the_tags('Tags: ', ', ', ' ')); ?>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="fullstoptweet">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 			</p>
 		</div><!--.postMeta-->
+  </div>
+
+<!-- ADD BREAK BTWN POSTS, padding-bottom: 10-15px -->
 		
 	<?php endwhile; else: ?>
 		<div class="no-results">

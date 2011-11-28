@@ -2,7 +2,7 @@
 <?php get_sidebar(); ?>
 <div id="content-blog">
  
-	<?php /* printf( __( '%s' ), '' . single_cat_title( '', false ) . '' ); */ ?>
+	<h1><?php  printf( __( '%s' ), '' . single_cat_title( '', false ) . '' );  ?></h1>
 	<!-- displays the category's description from the Wordpress admin -->
 	<?php echo category_description(); ?>
 	

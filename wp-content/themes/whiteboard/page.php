@@ -24,7 +24,7 @@
   <?php } else { ?>
     <div id="content">
 <?php } ?>
-		<?php if (is_page(array(6,64,68,66))) { ?>
+		<?php if (is_page(array(999999))) { ?>
 			<div class="postcard">
 		<?php } else { ?>		
 	<div class="content-item">
@@ -33,7 +33,7 @@
 		<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		
 				
-				<?php if (is_page(array(6,64,68,66))) { ?>
+				<?php if (is_page(array(999999))) { ?>
 					
 				<?php } else { ?>
 				<h1 class="title"><?php the_title(); ?></h1>

@@ -112,22 +112,22 @@ header .logo_container {
           line-height: normal;
           position: relative;
           width: 175px; }
-      .sidebar ul ul#menu-main li#menu-item-44 ul li {
+      .sidebar ul ul#menu-main li#menu-item-44 ul li, .sidebar ul ul#menu-main li#menu-item-858 ul li {
         width: 100px; }
-        .sidebar ul ul#menu-main li#menu-item-44 ul li a {
+        .sidebar ul ul#menu-main li#menu-item-44 ul li a, .sidebar ul ul#menu-main li#menu-item-858 ul li a {
           width: 100px;
           width: 100px; }
-        .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li {
+        .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-50:hover ul li, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-43:hover ul li {
           width: 230px; }
-          .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li a {
+          .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-43:hover ul li a {
             width: 230px; }
-      .sidebar ul ul#menu-main li#menu-item-44:hover ul li ul {
+      .sidebar ul ul#menu-main li#menu-item-44:hover ul li ul, .sidebar ul ul#menu-main li#menu-item-858:hover ul li ul {
         display: none !important; }
-      .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover a {
+      .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-50:hover a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-43:hover a {
         cursor: default; }
-      .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul {
+      .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-50:hover ul, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-43:hover ul {
         display: block !important; }
-        .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li a {
+        .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-44 ul li.menu-item-43:hover ul li a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-50:hover ul li a, .sidebar ul ul#menu-main li#menu-item-858 ul li.menu-item-43:hover ul li a {
           cursor: pointer; }
       .sidebar ul ul#menu-main ul a {
         background: url("../images/menu_second_bg.png") repeat scroll 0 0 transparent;
