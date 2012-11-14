@@ -3,7 +3,7 @@
 <?php if (is_page(105)) { ?>
 
 	<div id="random">
-		<a href="<?php bloginfo('url'); ?>/2012" />
+		<a href="<?php bloginfo('url'); ?>/2012-season/outfoxed/" />
 			<img src="<?php bloginfo('url'); ?>/images/glow_button_new.gif" />
 		</a>
 		
@@ -22,9 +22,9 @@
 <?php if (is_page(811)) { ?>
 <div id="content" class="season">
   <?php } else { ?>
-    <div id="content">
+    <div id="content" class="post-<?php the_ID(); ?>">
 <?php } ?>
-		<?php if (is_page(array(999999))) { ?>
+		<?php if (is_page(array(1001, 1054, 1057))) { ?>
 			<div class="postcard">
 		<?php } else { ?>		
 	<div class="content-item">
@@ -33,8 +33,8 @@
 		<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		
 				
-				<?php if (is_page(array(999999))) { ?>
-					
+				<?php if (is_page(array(1001, 1054, 1057))) { 
+					/* ALSO UPDATE FS.CSS!!!!!!!!!!!!!! */?>
 				<?php } else { ?>
 				<h1 class="title"><?php the_title(); ?></h1>
 				

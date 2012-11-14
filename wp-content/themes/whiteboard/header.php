@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 	<title>
 	<?php if ( is_tag() ) {
@@ -54,15 +54,24 @@
 	  })();
 
 	</script>
-	<meta property="og:title" content="FullStop Collective" />
-  <meta property="og:type" content="actor" />
-  <meta property="og:url" content="http://fullstopcollective.org" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="FullStop Collective" />
   <meta property="fb:admins" content="3418506" />
+  <meta property="og:title" content="FullStop Collective - <?php wp_title(' '); ?>" />
+  <meta property="og:type" content="actor" />
+  <meta property="og:url" content="<?php echo get_permalink(); ?>" />
+  <meta property="og:image" content="http://fullstopcollective.org/images/fb.png" />
+  <meta property="og:site_name" content="FullStop Collective" />
 </head>
 
 <body <?php body_class(); ?>>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=105384406221433";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 <div id="page"><!-- this encompasses the entire Web site -->
 	<header>

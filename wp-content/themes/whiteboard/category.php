@@ -24,6 +24,7 @@
 		<div class="post-meta">
 			<p>
 				<?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
+				<fb:like href="<?php the_permalink() ?>" send="false" layout="button_count" width="110" show_faces="false"></fb:like>
 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink() ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="fullstoptweet">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 			</p>
 		</div><!--.postMeta-->

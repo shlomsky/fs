@@ -13,7 +13,9 @@
       			<?php the_time('M j, Y') ?>&nbsp;&nbsp;<span class="sep">|</span>&nbsp;&nbsp;<span class="name"><?php the_author() ?></span>
       		</p>
       		<div class="share">
-      		  <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      		  <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-url="<?php the_permalink() ?>" data-via="fullstoptweet" data-text="<?php the_title(); ?>">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+      		  <br />
+      		  <fb:like href="<?php the_permalink() ?>" send="false" layout="button_count" width="110" show_faces="false"></fb:like>
       		</div>
 					<?php the_content(); ?>
 					<div class="pagination">

@@ -3,8 +3,8 @@ Contributors: Bueltge
 Donate link: http://bueltge.de/wunschliste/
 Tags: database, mysql, search, replace, admin, security
 Requires at least: 1.5
-Tested up to: 3.1
-Stable tag: 2.6.0
+Tested up to: 3.3
+Stable tag: 2.6.3
 
 A simple search for find strings in your database and replace the string.
 
@@ -39,6 +39,10 @@ You may also be interested in WordPress tips and tricks at [WP Engineer](http://
 * Polish translation by [Bartosz Sobczyk](http://www.brt12.eu "Bartosz Sobczyk")
 * Persian translation by [Mostafa Soufi](http://iran98.org "iran98.org")
 * Danish translation by [GeorgWP](http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=265 "wordpress.blogos.dk")
+* Spanish translation by [myhosting.com Team](http://myhosting.com/)
+* Belarussian language by [Alexander Ovsov](http://webhostinggeeks.com/science/)
+* Thanks to [Brian Flores](http://www.inmotionhosting.com/) for serbian translation
+* Thanks to [Martien van de Griendt](http://www.vandegriendtwebsites.nl) for dutch translation
 
 = Licence =
 Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you can thank me and leave a [small donation](http://bueltge.de/wunschliste/ "Wishliste and Donate") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
@@ -48,8 +52,20 @@ The plugin comes with various translations, please refer to the [WordPress Codex
 
 
 == Changelog ==
+= v2.6.3 (10/10/2011) =
+* filter for return values, html-filter
+* add belarussian language
+
+= v2.6.2 (09/11/2011) =
+* change right object for use the plugin also on WP smaller 3.0, include 2.9
+* add function search and replace in all tables of the database - special care!
+
+= v2.6.1 (01/25/2011) =
+* Feature: Add Signups-Table for WP MU
+* Maintenance: check for tables, PHP Warning fix 
+
 = v2.6.0 (01/03/2011) =
-* Feature: add an new search for find strings
+* Feature: add an new search for find strings (maybe a new way for search strings)
 * Maintenance: small changes on source
 
 = v2.5.1 (07/07/2010) =

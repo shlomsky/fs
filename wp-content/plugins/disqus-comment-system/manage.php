@@ -3,7 +3,7 @@ global $dsq_api;
 
 require(ABSPATH . 'wp-includes/version.php');
 
-if ( !current_user_can('manage_options') ) {
+if ( !current_user_can('moderate_comments') ) {
     die();
 }
 
@@ -378,7 +378,6 @@ case 0:
                         <div class="status">
                             <p><?php echo dsq_i('This will download your Disqus comments and store them locally in WordPress'); ?></p>
                             <label><input type="checkbox" id="dsq_import_wipe" name="dsq_import_wipe" value="1"/> <?php echo dsq_i('Remove all imported Disqus comments before syncing.'); ?></label><br/>
-                            <label><input type="checkbox" id="dsq_import_force" name="dsq_import_force" value="1"/> <?php echo dsq_i('Force the sync task even if it\'s already in progress.'); ?></label><br/>
                             <p><a href="#" class="button"><?php echo dsq_i('Sync Comments'); ?></a></p>
                         </div>
                     </div>
@@ -394,8 +393,8 @@ case 0:
                 <td>
                     <form action="?page=disqus" method="POST">
                         <?php wp_nonce_field('dsq-uninstall'); ?>
-                        <p>This will remove all Disqus specific settings, but it will leave your comments unaffected.</p>
-                        <input type="submit" value="Uninstall" name="uninstall" onclick="return confirm('<?php echo dsq_i('Are you sure you want to uninstall Disqus?'); ?>')" class="button" />
+                        <p><input type="submit" value="Uninstall" name="uninstall" onclick="return confirm('<?php echo dsq_i('Are you sure you want to uninstall Disqus?'); ?>')" class="button" /> This will remove all Disqus specific settings, but it will leave your comments unaffected.</p>
+                        NOTE: If you have problems with uninstallation taking too long you may wish to manually drop the <code>disqus_dupecheck</code> index from your <code>commentmeta</code> table.
                     </form>
                 </td>
             </tr>
@@ -403,17 +402,17 @@ case 0:
         <br/>
         <h3><?php echo dsq_i('Debug Information'); ?></h3>
         <p><?php echo dsq_i('Having problems with the plugin? <a href="%s">Drop us a line</a> and include the following details and we\'ll do what we can.', 'mailto:help+wp@disqus.com'); ?></p>
-        <textarea style="width:90%; height:200px;">URL: <?php echo get_option('siteurl'); ?> 
-PHP Version: <?php echo phpversion(); ?> 
-Version: <?php echo $wp_version; ?> 
-Active Theme: <?php $theme = get_theme(get_current_theme()); echo $theme['Name'].' '.$theme['Version']; ?> 
-URLOpen Method: <?php echo dsq_url_method(); ?> 
+        <textarea style="width:90%; height:200px;">URL: <?php echo get_option('siteurl'); ?>
+PHP Version: <?php echo phpversion(); ?>
+Version: <?php echo $wp_version; ?>
+Active Theme: <?php $theme = get_theme(get_current_theme()); echo $theme['Name'].' '.$theme['Version']; ?>
+URLOpen Method: <?php echo dsq_url_method(); ?>
 
-Plugin Version: <?php echo DISQUS_VERSION; ?> 
+Plugin Version: <?php echo DISQUS_VERSION; ?>
 
 Settings:
 
-dsq_is_installed: <?php echo dsq_is_installed(); ?> 
+dsq_is_installed: <?php echo dsq_is_installed(); ?>
 
 <?php foreach (dsq_options() as $opt) {
     echo $opt.': '.get_option($opt)."\n";

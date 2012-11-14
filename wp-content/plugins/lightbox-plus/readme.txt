@@ -1,10 +1,10 @@
 === Lightbox Plus ===
 Contributors: dzappone
-Donate link: http://www.23systems.net/donate/
+Donate link: http://www.23systems.net/plugins/donate/
 Tags: lightbox, photo, photos, image, images, video, ajax, gallery, colorbox, lightview, picture, overlay
-Requires at least: 2.8
-Tested up to: 3.0.1
-Stable tag: 2.2.1
+Requires at least: 3.0
+Tested up to: 3.3
+Stable tag: 2.4.6
 
 Lightbox Plus permits users to view larger versions of images, simple slide shows, videos and content all in an overlay.
 
@@ -14,19 +14,20 @@ Lightbox Plus implements ColorBox as a lightbox image overlay tool for WordPress
 
 Lightbox Plus uses WordPress's built in jQuery library.
 
-=Troubleshooting=
+= Troubleshooting =
 
-Please read the <a href="http://www.23systems.net/plugins/lightbox-plus/frequently-asked-questions/">FAQ</a> first if you are having problems.  
+Please read the <a href="http://www.23systems.net/plugins/lightbox-plus/frequently-asked-questions/">FAQ</a> first if you are having problems.
 
-If you are unable to resolve your problem with the information provided in the FAQ please submit a <a href="http://www.23systems.net/support/">support request<a/>.
+If you are unable to resolve your problem with the information provided in the FAQ please submit a <a href="http://www.23systems.net/services/support/">support request</a>.
 
 = Requirements =
 
 Server
 
 * WordPress 2.8+
-* PHP 4 (Not recommended and not supported) 
 * PHP 5+ (Recommended)
+
+Support for PHP 4 has been completely removed - DO NOT UPDATE if you want Lightbox Plus to work with PHP 4.
 
 Client
 
@@ -48,10 +49,10 @@ Optional: Use the title attribute if you want to show a caption.
         <a href="images/image-2.jpg" rel="lightbox[roadtrip]">image #2</a>
         <a href="images/image-3.jpg" rel="lightbox[roadtrip]">image #3</a>
 
-=Suggestions=
+= Suggestions =
 
-Submit <a href="https://fundry.com/project/9-lightbox-plus">suggestions</a> via <a href="https://fundry.com/about">Fundry</a>.        
-        
+Submit <a href="https://fundry.com/project/9-lightbox-plus">suggestions</a> via <a href="https://fundry.com/about">Fundry</a>.
+
 == Installation ==
 
 1. Extract lightbox-plus.zip to your `wp-content/plugins` directory.
@@ -67,7 +68,6 @@ See <a href="http://go.adobe.com/kb/ts_tn_15523_en-us">Flash content displays on
 
 To work around this issue you will need to add something like the following to your <code>&lt;param /&gt;</code> and <code>&lt;embed&gt;&lt;/embed&gt;</code> tags:
 <code>
-
         &lt;object&gt;&lt;param name="wmode" value="opaque" /&gt;&lt;embed wmode="opaque" [all other embed settings, file src etc.]&gt;&lt;/embed&gt;&lt;/object&gt;
 </code>
 
@@ -83,7 +83,17 @@ Finally, it seems that recent version of WordPress (or perhaps the plugin is cau
 
 = Lightbox Plus doesn't work properly in browser X, Y, or Z (Chrome, Safari, Firefox, Opera, Explorer 6, 7, etc)? =
 
-Yes it does, the problems are the same as above.  It has been tested in Firefox 2, 3, Safari 3, 4, Opera 9, 10, Chrome 1, 2, Internet Explorer 6, 7, 8 on Windows and Firefox 2, 3, Safari 3, 4 and Opera 9 on OS X and Firefox 2, 3, Opera 9, and Konqueror on Linux.
+Yes it probably does, the problems may be the same as above or there may be a conflict with another plugin or a style conflict.  It has been tested in ChromeIE 7+, FireFox 2+, Chrome, Safari 3+, Opera 8+ since development began.
+
+= Does Lightbox Plus work with PHP 4? If not, why not? =
+
+No it doesn't.  PHP 4 reached end of life on August 8th 2008 (over 3 years ago.)  WordPress no longer supports PHP 4 and all plugin developers are encourage to follow.  The best solution at this time is to ask your host provider to upgrade to PHP 5.
+
+You will know that Lightbox Plus is not working because of PHP if you recieve the following error:
+
+<b>Plugin couldn't be activated because of fatal error</b>
+
+<code>Parse error: syntax error, unexpected T_OBJECT_OPERATOR in /path/to/plugin/classes/filters.class.php on line 81</code>
 
 = Can I use this plugin and Lightview Plus, Lightbox 2 (either one), WP lightbox JS Plugin at the same time? =
 
@@ -135,8 +145,10 @@ If you have read and tried the above and you are still having problems, then, pl
 
 = Known Problems =
 
+* Does not work correctly with W3 Total Cache if you are using automatic minify settings.  You can manually set up minify to work correctly bypassing Lightbox Plus (jquery-colorbox.min.js)
+* A few minor bugs that were pointed out to me have yet to be addressed
 * No support for iPad (if someone wants to donate an iPad to me I will guarantee support)
-* In some instances performance may be slow in IE - this may be due to plugin conflicts or slow JavaScript performance in IE.
+* In some instances performance may be slow in older verions IE - this may be due to plugin conflicts or slow JavaScript performance in IE.
 * Lightboxed video does not seem to work in IE on locally installed sites, for example viewing in IE 7.0 while running XAMPP, this seems to be a Windows only issue.
 
 = Plugin Conflicts =
@@ -157,10 +169,81 @@ Note: These conflicts may now be mitigated as of version 1.6.3.
 
 == Change Log ==
 
+= 2.4.6 =
+* Fixed PHP 5 comment bug that got reintroduced into plugin
+
+= 2.4.5 =
+* Updated compatibility with WordPress 3.3
+* Updated ColorBox to verion 1.3.19
+ * Fixed bug related to using the 'fixed' property.
+ * Optimized the setup procedure to be more efficient.
+ * Removed $.colorbox.init() as it will no longer be needed (will self-init when called).
+ * Removed use of $.browser.
+ * Fixed a regression where Flash content displayed in ColorBox would be reloaded if the browser window was resized.
+ * Added safety check to make sure that ColorBox's markup is only added to the DOM a single time, even if $.colorbox.init() is called multiple times.  This will allow site owners to manually initialize ColorBox if they need it before the DOM has finished loading.
+ * Updated the example index.html files to be HTML5 compliant.
+ * Changed the slideshow behavior so that it immediately moves to the next slide when the slideshow is started.
+ * Minor regex bugfix to allow automatic detection of image URLs that include fragments. 
+
+= 2.4 =
+* Removed all support for PHP 4.
+ * If you still need a version that works with PHP 4 <b>DO NOT UPGRADE</b>
+ * If you get this error: <code>Parse error: syntax error, unexpected T_OBJECT_OPERATOR in /path/to/plugin/classes/filters.class.php on line 81</code> you have PHP 4.
+ * Contact your host provider to see if they can upgrade to PHP 5. 
+* Fixed issue where PHP Simple HTML DOM Parser was stripping returns causing issue with HTML output in several plugins (including SyntaxHighlighter Evolved)
+ * This issue should be fairly rare.
+* Patched PHP Simple HTML DOM Parser (<code>shd.class.php</code>) to verify <code>mb_detect_encoding()</code> function exist before calling
+ * This issue was reported by several users that did not have mbstring functions compiled into PHP.
+ * Assumes UTF-8 if function doesn't exist
+ * The correct solution is to add the <b>mbstring</b> library to PHP (contact you host/support to resolve)
+
+= 2.3.1 =
+* Changed wp_enqueue_script of jquery.colorbox-min.js to reduce chance of conflict with other implementations of ColorBox (should update for this reason)
+* Updated PHP Simple HTML DOM Parser from version 1.1 to 1.5
+ * Memory leak fixed!
+ * Added support for detecting the source html character set.  This is used to convert characters when plaintext is requested.
+ * Other little fixes and features, too numerous to categorize.
+ * Error of "file_get_contents()" will be thrown as an exception.
+ * Add flag: LOCK_EX while calling "file_put_contents()". 
+ * Fix the typo of "token_blank_t".
+ * Supports xpath generated from Firebug.
+ * New method "dump" of "simple_html_dom_node".
+ * New attribute "xmltext" of "simple_html_dom_node".
+ * remove preg_quote on selector match function: [attribute*=value];
+ * Element "Comment" will treat as children.
+ * Fixed the problem with &lt;pre&gt;.
+ * Fixed bug #2207477 (does not load some pages properly).
+ * Fixed bug #2315853 (Error with character after < sign).
+* Cleaned up some general code and updated some help in the admin panel
+* Updated demos as some were no longer pointing to working links
+* Fixed typos in this file
+* Updated the following styles: Dark, Elegant, Framed, Lightweight, and Shadowed
+
+= 2.3 =
+* Tested with WordPress 3.2.x
+* Minor bug fixes
+* Some minor text fixes
+* Added option to allow up to 100 inline lightboxes
+* Updated ColorBox to verion 1.3.17
+ * Added properties "top", "bottom", "left" and "right" to specify a position relative to the viewport, rather than using the default centering.
+ * Added property "data" to specify GET or POST data when using Ajax.  ColorBox's ajax functionality is handled by jQuery's .load() method, so the data property works the same way as it does with .load().
+ * Added property "fixed" which can provide fixed positioning for ColorBox, rather than absolute positioning.  This will allow ColorBox to remain in a fixed position within the visitors viewport, despite scrolling.  IE6 support for this was not added, it will continue to use the default absolute positioning.
+ * Fixed ClearType problem with IE7.
+ * Minor fixes.
+* Updated ColorBox to verion 1.3.16  
+ * Better IE related transparency workarounds.  IE7 and up now uses the same background image sprite as other browsers.
+ * Added error handling for broken image links. A message will be displayed telling the user that the image could not be loaded.
+ * Added new property: 'fastIframe' and set it to true by default.  Setting to fastIframe:false will delay the loading graphic removal and onComplete event until iframe has completely loaded.
+ * Ability to redefine $.colorbox.close (or prev, or next) at any time.
+
+= 2.2.2 =
+* Corrected load_plugin_textdomain function calls, had incorrect number of arguments - Thanks Johannes!
+* Minor interface corrections
+
 = 2.2.1 =
 * Require HTML Parser only for PHP 5.X.  Was causing errors with PHP 4.X.
 * Updated ColorBox to verion 1.3.15
- * In IE6, closing an iframe when using HTTPS no longer generates a security warning. 
+ * In IE6, closing an iframe when using HTTPS no longer generates a security warning.
  * Changed the index.html example files to use YouTube's new embedded link format.
  * By default, ColorBox returns focus to the element it was launched from once it closes.  This can now be disabled by setting the 'returnFocus' property to false.  Focus was causing problems for some users who had their anchor elements inside animated containers.
  * Minor bug fix involved in using a combination of slideshow and non-slideshow content.
@@ -175,7 +258,7 @@ Note: These conflicts may now be mitigated as of version 1.6.3.
 
 = 2.2 =
 * Fixed "Object id #", "Object", "Object #" errors with PHP 5.1.x.
- * Problem was due to circular memory leak in PHP 5.1 and 5.2 and HTML DOM object not being cleaned up. 
+ * Problem was due to circular memory leak in PHP 5.1 and 5.2 and HTML DOM object not being cleaned up.
  * Altered way the content is returned to allow for closure and cleaning of object sooner eliminating memory leak.
 * Due to overhwhelming demand I added PHP 4 functionality back in but it is not officially supported.
  * If you were seeing an error that looked something like `Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /path/to/plugins/lightbox-plus/classes/shd.class.php on line 86` you have PHP 4.
@@ -184,7 +267,7 @@ Note: These conflicts may now be mitigated as of version 1.6.3.
 * Fix for images with upper case file extension not being auto-lightboxed.
 * Probable fix for `XML Parsing Error: no element found` likely caused by memory leak
  * Unable to reproduce error but research indicates memory leak is a likely cause.
- 
+
 = 2.1 =
 * Now requires PHP 5+, no PHP 4 support.
  * PHP4 reached it's end of life on 8/8/2008 nearly 2 years ago.
@@ -461,11 +544,17 @@ Note: These conflicts may now be mitigated as of version 1.6.3.
 = 1.0 =
 * Initial release
 
+== Upgrade Notice ==
+
+= 2.4.6 =
+* Upgrade recommended because inserted comment could cause visual issues with you pages
+
 == Special Thanks ==
 
 * Dirk Schmitz (for pointing out an obvious bug that I kept overlooking)
-* <a href="http://www.hightechdad.com/">Michael Sheehan</a> and <a href="http://www.funnybunny.se/">Helena Hult&eacute;n</a> for constinued support and testing.
+* <a href="http://www.hightechdad.com/">Michael Sheehan</a> and <a href="http://www.funnybunny.se/">Helena Hult&eacute;n</a> for continued support and testing.
 * Ken Williams (for testing version 1.5)
+* Bart Lauwers of <a href="http://www.genthree.com/">GenThree</a>
 * navjotsingh (for bug fix in gellery shortcode with version 1.6.x)
 * <a href="http://www.dev4press.com/">Milan Petrovic</a> for some quick debugging of version 2.0 admin panel
 * <a href="http://www.melaniesallis.com">Melanie Sallis</a> for needing a lightbox for her site which prompted me to create this plugin

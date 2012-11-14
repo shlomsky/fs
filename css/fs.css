@@ -157,6 +157,7 @@ header .logo_container {
 #content {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.9);
+  *background-color: #fff;
   color: #1E1E1E;
   float: left;
   margin: 0 0 0 42px;
@@ -292,6 +293,50 @@ a {
     .postcard p a {
       text-decoration: none; }
 
+#content.post-1001,#content.post-1054, #content.post-1057 {
+  background: none;
+  border-radius: 0px; }
+  #content.post-1001 .postcard,#content.post-1054 .postcard,#content.post-1057 .postcard {
+    box-shadow: none; }
+    #content.post-1001 .postcard #toggle, #content.post-1054 .postcard #toggle,#content.post-1057 .postcard #toggle {
+      width: 640px;
+      float: left; }
+    #content.post-1001 .postcard #share, #content.post-1054 .postcard #share,#content.post-1057 .postcard #share {
+      float: right;
+      width: 85px;
+      padding: 0;
+      position: relative;
+      left: 10px;
+      line-height: 8px; }
+    #content.post-1001 .postcard #postcard-desc, #content.post-1054 .postcard #postcard-desc,#content.post-1057 .postcard #postcard-desc {
+      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.9);
+      *background-color: #fff;
+      color: #1E1E1E;
+      float: left;
+      margin: 20px 0 0 0;
+      font-family: 'helvetica nue',helvetica,arial,sans-serif;
+      width: 695px;
+      z-index: 0;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -khtml-border-radius: 4px;
+      border-radius: 4px;
+      padding: 15px;
+      -moz-box-shadow: 0px 0px 7px #1e1e1e;
+      -webkit-box-shadow: 0px 0px 7px #1e1e1e;
+      -o-box-shadow: 0px 0px 7px #1e1e1e;
+      box-shadow: 0px 0px 7px #1e1e1e; }
+      #content.post-1001 .postcard #postcard-desc p,  #content.post-1054 .postcard #postcard-desc p,#content.post-1057 .postcard #postcard-desc p {
+        color: #1E1E1E;
+        font-size: 13px;
+        line-height: 21px;
+        margin: 9px 0 15px;
+        font-family: 'helvetica nue',helvetica,arial,sans-serif;
+        text-shadow: 0 1px 0 white; }
+
 footer {
   float: right;
   width: 725px; }
@@ -363,9 +408,15 @@ ul#menu-the-collective {
   padding: 0; }
 #corestaff li {
   font-size: 17px;
-  line-height: 17px;
+  line-height: 20px;
   margin: 0 0 20px;
-  list-style: none; }
+  list-style: none;
+  font-weight: bold;
+  color: #343434; }
+  #corestaff li span {
+    font-size: 12px !important;
+    line-height: 16px;
+    font-weight: normal; }
 
 .contact_info {
   font-size: 11px;
@@ -406,6 +457,7 @@ hr {
   #content-blog div.post {
     background-color: #fff;
     background-color: rgba(255, 255, 255, 0.9);
+    *background-color: #fff;
     color: #1E1E1E;
     float: left;
     z-index: 0;
@@ -533,12 +585,16 @@ hr {
   box-shadow: 0px 0px 7px #1e1e1e;
   padding: 5px 15px 0;
   position: relative;
-  width: 695px; }
+  width: 695px;
+  *background-color: #fff; }
 #content-blog.single .dsq-brlink {
   display: none; }
 #content-blog.single .share {
   float: right;
-  padding: 5px 0 25px 25px; }
+  padding: 5px 0 25px 25px;
+  width: 97px; }
+  #content-blog.single .share iframe {
+    padding: 0 0 3px 0; }
 
 article img {
   float: right;
@@ -572,3 +628,10 @@ article img {
     background: url("../images/menu_first_bg.png") repeat scroll 0 0 transparent !important; }
   #twitter-feed #twtr-widget-1 .twtr-tweet em a {
     color: #f9f9f9 !important; }
+  #twitter-feed .twtr-tweet-text {
+    padding: 0 0 10px 0; }
+
+ul.unville {
+  text-shadow: 0px 1px 0px #1e1e1e; }
+  ul.unville a {
+    text-shadow: 0px 1px 0px #1e1e1e; }

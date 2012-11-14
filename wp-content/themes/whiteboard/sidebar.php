@@ -12,6 +12,8 @@
 	  <a href="http://twitter.com/fullstoptweet" target="_blank" title="we're all about the tweet"><img src="<?php bloginfo('url'); ?>/images/twitter_icon.png"></a>
 	  <a href="http://www.youtube.com/user/FullStopCollective" target="_blank" title="fullstop videos, yo"><img src="<?php bloginfo('url'); ?>/images/video_youtube_icon.png"></a>
 	  <a href="https://www.fracturedatlas.org/site/contribute/donate/2103" target="_blank" title="please help support us!"><img src="<?php bloginfo('url'); ?>/images/support-icon.png"></a>
+	  <a href="http://eepurl.com/nFl6b" target="blank"><img src="<?php bloginfo('url'); ?>/images/button_email.png?v1"></A>
+    
 	</div>
 	
 	<div id="twitter-feed">
@@ -23,7 +25,7 @@
      rpp: 1,
      interval: 30000,
      width: 183,
-     height: 125,
+     height: 135,
      theme: {
       shell: {
         background: '#050505',

@@ -1,6 +1,6 @@
 /*---- Lightbox Plus Styles ----*/
 /**
-* Lightbox Plus 2.1 - 2010.07.12
+* Lightbox Plus 2.4.6 - 2011.12.30 
 */
 .notice{background:#dff0f5 url(images/information.png) center no-repeat;background-position:15px 50%;text-align:left;border:1px solid #3796b3;display:block;padding:5px 20px 5px 45px;color:#046380;width:90%;margin:10px auto;-webkit-border-radius:10px;-moz-border-radius:10px;-khtml-border-radius:10px;}
 .about{background:#dff0f5;text-align:left;border:1px solid #3796b3;display:block;padding:5px 20px 5px 20px;color:#046380;width:90%;margin:10px auto;-webkit-border-radius:10px;-moz-border-radius:10px;-khtml-border-radius:10px;}
@@ -24,6 +24,7 @@ a.togbox:hover{border:1px solid #cccccc;background:#ffffff;color:#999999;}
 .lbp input{max-width:500px;}
 .lbp .primary_test,.lbp .secondary_test,.lbp .inline_html_test,.lbp .inline_link_test{width:100%;min-width:500px;max-width:100%;font-family:consolas,monaco,monospace;}
 .lbp-elements{max-width:500px;text-align:left;}
+.clear{clear:both;}
 /*---- jQuery UI CSS Framework ----*/
 .ui-helper-hidden{display:none;}
 .ui-helper-hidden-accessible{position:absolute;left:-99999999px;}
